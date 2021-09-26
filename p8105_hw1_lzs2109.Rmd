@@ -12,10 +12,10 @@ library(tidyverse)
 hw1_df = tibble(
   vec_numeric = rnorm(10),
   vec_logical = vec_numeric > 0,
-  vec_character = c("I", "hope", "I'll", "do", "well", "during", "my", 
-                    "studies", "in", "school"),
-  vec_factor = factor(c("good", "fair", "poor", "fair", "fair", "good", "poor", "poor",
-                 "fair", "good"))
+  vec_character = c("Sphinx", "of", "black", "quartz", "judge", "my", "vow", 
+                    "is", "a", "pangram"),
+  vec_factor = factor(c("good", "poor", "good", "good", "fair", "poor", "fair", 
+                        "fair", "poor", "good"))
 )
 
 mean(pull(hw1_df, vec_numeric))
