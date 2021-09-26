@@ -56,7 +56,7 @@ is `r mean(penguins$flipper_length_mm, na.rm = TRUE)` mm. Here's a scatterplot
 of flipper length vs bill length! (both measured in millimeters)
 
 ```{r}
-#plot penguins data below - bill length vs flipper length, colored by species
+#plot penguins data below - flipped length vs bill length, colored by species
 ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, 
                      color = species)) + geom_point()
 
