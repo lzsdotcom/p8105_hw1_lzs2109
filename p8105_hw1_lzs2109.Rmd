@@ -24,21 +24,24 @@ mean(pull(hw1_df, vec_character)) #unable to take the mean of vec_character
 mean(pull(hw1_df, vec_factor)) #also unable to take the mean of vec_factor
 ```
 
-The character vectors create an error when passing them through the mean
-function, because a mean cannot be taken from characters. The logical vector
-is able to produce a mean, because a TRUE is equal to 1 and a FALSE is equal
-to 0. Passing logical vectors through the as.numeric function produces these
-1s and 0s, as shown below. However, passing character vectors forces all
+The character and factor vectors create an error when passing them through the mean
+function, because a mean cannot be taken from characters. The result is NA. 
+The logical vector is able to produce a mean, because a TRUE is equal to 1 and a 
+FALSE is equal to 0. Passing logical vectors through the as.numeric function produces 
+these 1s and 0s, as shown below. However, passing the character vectors forces all
 entries to NAs, because no equivalent numeric values exist for characters and
 words as far as R is concerned. This explains why R is unable to take the mean
 of a character vector as well, as NA has no values to take the mean of. The mean
-of a string of NAs will be NA.
+of a string of NAs will be NA. The factor vector however, since it has 'levels'
+is converted to a number that represents its level when passed through the as.numeric
+function, and a mean is now able to be taken from these level numbers.
 
 ```{r, eval = FALSE}
-as.numeric(hw1_df$vec_logical)
-as.numeric(hw1_df$vec_character)
-as.numeric(hw1_df$vec_factor)
-mean(as.numeric(hw1_df$vec_character))
+as.numeric(pull(hw1_df, vec_logical))
+as.numeric(pull(hw1_df, vec_character))
+as.numeric(pull(hw1_df, vec_factor))
+mean(as.numeric(pull(hw1_df, vec_character)))
+mean(as.numeric(pull(hw1_df, vec_factor)))
 ```
 
 **Problem 2**
