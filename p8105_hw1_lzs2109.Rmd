@@ -50,7 +50,9 @@ mean(as.numeric(pull(hw1_df, vec_factor)))
 data("penguins", package = "palmerpenguins") #loads in penguin dataset
 ```
 
-The penguins dataset includes information about penguins! The variables listed
+The penguins dataset includes descriptive information about penguins! Information
+about their habitat and variables describing body and appendage size as well as
+sex and species are included in the dataset. The variables listed
 in the dataset include `r names(penguins)`, for a total of `r ncol(penguins)`
 rows and `r nrow(penguins)` observations, or different penguins. The word 
 penguin is already starting to lose meaning from repetition. Interestingly, in
