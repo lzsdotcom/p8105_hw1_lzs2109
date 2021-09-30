@@ -55,7 +55,7 @@ in the dataset include `r names(penguins)`, for a total of `r ncol(penguins)`
 rows and `r nrow(penguins)` observations, or different penguins. The word 
 penguin is already starting to lose meaning from repetition. Interestingly, in
 this dataset, the mean flipper length in millimeters 
-is `r mean(penguins$flipper_length_mm, na.rm = TRUE)` mm. Here's a scatterplot
+is `r mean(pull(penguins, flipper_length_mm), na.rm = TRUE)` mm. Here's a scatterplot
 of flipper length vs bill length! (both measured in millimeters)
 
 ```{r}
